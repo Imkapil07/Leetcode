@@ -8,7 +8,7 @@ class Solution {
             List<Integer> row = new ArrayList<>();
             for (int j = 0; j <= i; j++) {
                 if (j == 0 || j == i) {
-                    row.add(1); 
+                    row.add(1); // First and last element of each row is always 1
                 } else {
                     int element = triangle.get(i - 1).get(j - 1) + triangle.get(i - 1).get(j);
                     row.add(element);
