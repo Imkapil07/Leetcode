@@ -7,7 +7,7 @@ class Solution {
 
         for (right = 0; right < s.length(); right++) {
             maxOcc = Math.max(maxOcc, ++arr[s.charAt(right) - 'A']);
-            while (right - left + 1 - maxOcc > k) {
+            if (right - left + 1 - maxOcc > k) {
                 arr[s.charAt(left) - 'A']--;
                 left++;
             }
